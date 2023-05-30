@@ -13,15 +13,23 @@ const body = document.querySelector ("body");
 const ico = document.getElementById("icon");
       
       ico.style.color = "gb(57, 60, 63)";
-      ico.style.fontSize = "30px";
+      ico.style.fontSize = "20px";
       ico.style.paddingRight = "60px";
                                                                                              
-    
-      ico.addEventListener("click", clicar);
-      function clicar() {
+    ico.addEventListener("dblclick", duplo);
+    ico.addEventListener("click", clicar);
+
+    function clicar() {
         document.body.style.background= "url(noite.jpg)"
         document.body.style.backgroundSize = "cover" 
+        ico.innerHTML = "Back to MAAT view."
        };
+
+    function duplo() {
+        document.body.style.background = "url(ponte1.jpg)"
+        document.body.style.backgroundSize = "cover"
+        ico.innerHTML = "View from Senhora do Monte."
+       }
     
 const pointer = document.querySelector(".cursor");
        document.addEventListener(`mousemove`, function(e){
